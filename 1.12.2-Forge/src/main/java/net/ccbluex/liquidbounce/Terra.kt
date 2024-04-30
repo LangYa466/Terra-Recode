@@ -31,8 +31,8 @@ import net.ccbluex.liquidbounce.utils.RotationUtils
 object Terra {
     // Client information
     const val CLIENT_NAME = "Terra"
-    const val CLIENT_VERSION = 13
-    const val CLIENT_CREATOR = "Qingyou"
+    const val CLIENT_VERSION = 14
+    const val CLIENT_CREATOR = "Qingyou || LangYa"
     const val CLIENT_CLOUD = "https://cloud.liquidbounce.net/LiquidBounce"
     val UPDATE_LIST = arrayListOf(
         "b13",
@@ -45,7 +45,10 @@ object Terra {
         "Criticals Recode",
         "Anime GuiMainMenu",
         "Recode TargetHud",
-        "Reduced the volume of the project"
+        "Reduced the volume of the project",
+        "Fix Notification",
+        "Fix NameTags",
+        "Add MessageBuilder"
     )
 
     var isStarting = false
