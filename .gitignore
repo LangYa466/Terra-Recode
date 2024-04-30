@@ -1,0 +1,7 @@
+/.gradle/
+/.idea/
+/build/
+/1.12.2-Forge/.gradle/
+/1.12.2-Forge/build/
+/1.12.2-Forge/run/
+/1.12.2-Forge/1.12.2-Forge.iml
