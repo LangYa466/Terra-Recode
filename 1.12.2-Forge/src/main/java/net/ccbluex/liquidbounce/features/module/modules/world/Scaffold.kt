@@ -93,7 +93,7 @@ class Scaffold : Module() {
     // AutoBlock
     private val autoBlockValue = ListValue("AutoBlock", arrayOf("Off", "Spoof", "Pick", "Switch"), "Pick")
 
-    private val sprintModeValue =
+    val sprintModeValue =
         ListValue("Sprint-Mode", arrayOf("Normal", "OnGround", "HuaYuTing", "OffGround", "Off"), "OnGround")
     private val placeConditionValue =
         ListValue("Place-Condition", arrayOf("Air", "FallDown", "NegativeMotion", "HuaYuTing", "Always"), "HuaYuTing")

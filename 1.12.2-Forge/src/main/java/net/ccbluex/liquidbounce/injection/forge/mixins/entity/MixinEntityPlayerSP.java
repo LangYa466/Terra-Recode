@@ -387,7 +387,7 @@ public abstract class MixinEntityPlayerSP extends MixinAbstractClientPlayer {
 
         final Scaffold scaffold = Terra.moduleManager.getModule(Scaffold.class);
 
-        if ((scaffold.getState() && !scaffold.sprintValue.get())
+        if ((scaffold.getState() && !(scaffold.getSprintModeValue().get() != "Off"))
                 || (sprint.getState() && sprint.checkServerSide.get() && (onGround || !sprint.checkServerSideGround.get()) && !sprint.allDirectionsValue.get() && RotationUtils.targetRotation != null && RotationUtils.getRotationDifference(new Rotation(mc.player.rotationYaw, mc.player.rotationPitch)) > 30)) {
             this.setSprinting(false);
         }

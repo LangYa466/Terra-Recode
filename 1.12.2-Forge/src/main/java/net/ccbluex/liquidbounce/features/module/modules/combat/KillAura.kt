@@ -140,7 +140,7 @@ class KillAura : Module() {
 
 
     // Modes
-    private val rotations =
+    val rotations =
         ListValue("RotationMode", arrayOf("Vanilla", "Other", "Center", "More", "MoreTest"), "Other")
     private val silentRotationValue = BoolValue("SilentRotation", true)
     private val rotationStrafeValue = ListValue("Strafe", arrayOf("Off", "Strict", "Silent"), "Off")
@@ -187,7 +187,7 @@ class KillAura : Module() {
 
     // Target
     var target: IEntityLivingBase? = null
-    private var currentTarget: IEntityLivingBase? = null
+    var currentTarget: IEntityLivingBase? = null
     private var hitable = false
     private val prevTargetEntities = mutableListOf<Int>()
     private var lastTarget: IEntityLivingBase? = null
