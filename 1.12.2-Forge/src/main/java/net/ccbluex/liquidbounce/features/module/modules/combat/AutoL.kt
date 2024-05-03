@@ -124,17 +124,21 @@ class AutoL : Module() {
     )
 
     private val nsxText = arrayOf(
-        "你现在有没有入权了?",
-        "给青柚老Ma子上香^^",
+        "$name 现在有没有入权了?",
+        "给 $name 老Ma子上香^^",
         "你告诉我，是不是这个情况?",
         "SilenceFix is God in QuickMacro",
-        "使用Skyrim但是没有脑子的人是你吗",
+        "使用Skyrim但是没有脑子的人是 $name 吗",
         "你为什么翻来覆去的",
-        "七上八下侮辱你了",
-        "是漏防哥吗?",
-        "咋了兄弟,要来偷刀?",
+        "七上八下侮辱 $name 了",
+        "$name 是漏防哥吗?",
+        "咋了 $name ,要来偷刀?",
         "是不是",
-        "对不对"
+        "对不对",
+        "cnm",
+        "$name 是不是翻来覆去的",
+        "$name 是不是脑残了",
+        "我DXG一天圈十万，$name 羡慕死了吧"
     )
 
     private fun getR18Text(): String {
