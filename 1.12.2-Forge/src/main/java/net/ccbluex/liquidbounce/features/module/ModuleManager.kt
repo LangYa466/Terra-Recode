@@ -115,6 +115,7 @@ class ModuleManager : Listenable {
             Sprint::class.java,
             Step::class.java,
             Strafe::class.java,
+            NoC03s::class.java,
 //Player
             AntiAFK::class.java,
             AntiAim::class.java,

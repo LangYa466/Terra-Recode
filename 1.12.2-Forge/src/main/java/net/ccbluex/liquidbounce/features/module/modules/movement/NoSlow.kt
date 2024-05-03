@@ -72,13 +72,14 @@ class NoSlow : Module() {
                 mc.thePlayer!!.motionZ = mc.thePlayer!!.motionZ
             }
 
+            // testcode
             "grimac" -> {
                 if ((event.eventState == EventState.PRE && mc.thePlayer!!.itemInUse != null && mc.thePlayer!!.itemInUse!!.item != null) && !mc.thePlayer!!.isBlocking && classProvider.isItemFood(
                         mc.thePlayer!!.heldItem!!.item
                     ) || classProvider.isItemPotion(mc.thePlayer!!.heldItem!!.item)
                 ) {
                     if (mc.thePlayer!!.isUsingItem && mc.thePlayer!!.itemInUseCount >= 1) {
-                        mc2.connection!!.sendPacket(CPacketHeldItemChange((mc2.player.inventory.currentItem + 1) % 9))
+                        mc2.connection!!.sendPacket(CPacketHeldItemChange(-2))
                         mc2.connection!!.sendPacket(CPacketHeldItemChange(mc2.player.inventory.currentItem))
                     }
                 }
@@ -86,6 +87,7 @@ class NoSlow : Module() {
                     mc.netHandler.addToSendQueue(classProvider.createCPacketPlayerDigging(ICPacketPlayerDigging.WAction.RELEASE_USE_ITEM, WBlockPos.ORIGIN, classProvider.getEnumFacing(EnumFacingType.DOWN)))
                 }
             }
+
 
             "switchitem" -> {
                 if (mc2.player.heldItemMainhand.item is ItemSword && mc.gameSettings.keyBindUseItem.isKeyDown) {

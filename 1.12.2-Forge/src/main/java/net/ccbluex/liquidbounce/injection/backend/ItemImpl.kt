@@ -16,6 +16,7 @@ open class ItemImpl<T : Item>(val wrapped: T) : IItem {
     override fun asItemBlock(): IItemBlock = ItemBlockImpl(wrapped as ItemBlock)
     override fun asItemSword(): IItemSword = ItemSwordImpl(wrapped as ItemSword)
     override fun asItemBucket(): IItemBucket = ItemBucketImpl(wrapped as ItemBucket)
+    override fun getDefaultInstance(): IItemStack = wrapped.defaultInstance.wrap()
 
     override fun equals(other: Any?): Boolean {
         return other is ItemImpl<*> && other.wrapped == this.wrapped

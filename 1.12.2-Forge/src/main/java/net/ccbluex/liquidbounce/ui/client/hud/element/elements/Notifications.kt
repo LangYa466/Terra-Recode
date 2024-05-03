@@ -381,9 +381,7 @@ class Notification(
                 0F,
                 30F,
                 max(
-                    width - width * ((nowTime - displayTime) / (animeTime * 2F + time)) + Fonts.font40.getStringWidth(
-                        content
-                    ) - 75F, 0F
+                    width - width * ((nowTime - displayTime) / (animeTime * 2F + time)) + width - 100F, 0F
                 ),
                 2f,
                 2f,

@@ -14,6 +14,7 @@ interface IItem {
     fun asItemBlock(): IItemBlock
     fun asItemSword(): IItemSword
     fun asItemBucket(): IItemBucket
+    fun getDefaultInstance(): IItemStack
 
     fun getItemByID(id : Int) : IItem = Item.getItemById(id) as IItem
 

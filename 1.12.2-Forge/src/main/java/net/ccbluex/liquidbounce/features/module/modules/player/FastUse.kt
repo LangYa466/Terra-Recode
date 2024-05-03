@@ -14,11 +14,12 @@ import net.ccbluex.liquidbounce.value.BoolValue
 import net.ccbluex.liquidbounce.value.FloatValue
 import net.ccbluex.liquidbounce.value.IntegerValue
 import net.ccbluex.liquidbounce.value.ListValue
+import net.minecraft.network.play.client.CPacketPlayer
 
 @ModuleInfo(name = "FastUse", description = "Allows you to use items faster.", category = ModuleCategory.PLAYER)
 class FastUse : Module() {
 
-    private val modeValue = ListValue("Mode", arrayOf("Instant", "NCP", "AAC", "CustomDelay"), "NCP")
+    private val modeValue = ListValue("Mode", arrayOf("Instant", "NCP", "AAC", "CustomDelay","HuaYuTing"), "NCP")
 
     private val noMoveValue = BoolValue("NoMove", false)
 
@@ -80,6 +81,14 @@ class FastUse : Module() {
                     }
 
                     msTimer.reset()
+                }
+
+                "huayuting" -> {
+                    mc.timer.timerSpeed = 0.3F
+                    usedTimer = true
+                    repeat(34) {
+                        mc2.connection!!.sendPacket(CPacketPlayer(mc.thePlayer!!.onGround))
+                    }
                 }
             }
         }
