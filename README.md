@@ -5,3 +5,6 @@ A Minecraft1.12.2 Forge Mod modified based on LiquidBounce
 1. Depending on which IDE you are using execute either of the following commands:
    - For IntelliJ: `gradlew --debug setupDevWorkspace idea genIntellijRuns build`
    - For Eclipse: `gradlew --debug setupDevWorkspace eclipse build`
+
+
+2405756863(3290672247) 修改了Terra的著作权但是未盈利
